@@ -99,6 +99,7 @@ p.zoom(probability=0.5, min_factor=1.1, max_factor=1.5)
 				height(Integer) - 希望裁剪的高度
 				centre(Boolean) - 如果为True，则从图像中心进行裁剪，否则，从图像的随机位置进行裁剪
 			返回值：无
+		注：crop操作会改变图像的大小！！！`crop_by_size`，`crop_center`和`crop_random`都是如此
 	* ```crop_centre(probability, percentage_area, randomise_percentage_area=False)```
 	
 		以percentage_area指定的比例为大小在图像中心对图像进行裁剪
@@ -248,7 +249,7 @@ p.zoom(probability=0.5, min_factor=1.1, max_factor=1.5)
 * **Zoom**
 	* ```zoom(probability, min_factor, max_factor)```
 
-		随机放大图像，同时保持图像大小不变，放大倍数的范围由min\_factor和max\_factor控制。相当于先放大图像，然后以图像中心位置为中心，裁剪与原图像大小相同区域。注意和```scale```函数的区别
+		随机放大图像，同时保持图像大小不变，放大倍数的范围由min\_factor和max\_factor控制。相当于先放大图像，然后以图像中心位置为中心，裁剪与原图像大小相同区域。注意和```crop```功能的区别
 	
 			参数：probability(Float) - 0到1之间的值，表示在图像上进行这个操作的概率
 				min_factor(Float) - 图像放大范围的下界
