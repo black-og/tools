@@ -30,7 +30,7 @@ p.zoom(probability=0.5, min_factor=1.1, max_factor=1.5)
 
 ![](https://i.imgur.com/sVc8td8.png)
 
-利用`status()`函数显示出的pipeline中所有操作的索引，调用`remove_operation(operation_index)`函数即可将制定索引对应的操作从当前pipeline中移除。
+利用`status()`函数显示出的pipeline中所有操作的索引，调用`remove_operation(operation_index)`函数即可将指定的索引对应的操作从当前pipeline中移除。
 
 如果你想使得图像和与其对应的groundtruth图像一起进行相同的操作，只需通过`ground_truth`函数将groundtruth图像所在目录添加到pipeline即可，即：
 
